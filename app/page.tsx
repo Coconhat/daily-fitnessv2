@@ -455,10 +455,6 @@ export default function Home() {
                     <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Free wifi and water</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
-                    <span>One free fitness assessment</span>
-                  </li>
                 </ul>
                 <Button className="w-full bg-primary hover:bg-primary-dark text-white">
                   Get Started
@@ -495,10 +491,6 @@ export default function Home() {
                   <li className="flex items-center">
                     <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Free wifi and water</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
-                    <span>Two free fitness assessments</span>
                   </li>
                 </ul>
                 <Button className="w-full bg-primary hover:bg-primary-dark text-white">
