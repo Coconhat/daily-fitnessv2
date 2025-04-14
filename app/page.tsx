@@ -30,6 +30,7 @@ import { MarqueeDemo } from "@/components/marquee";
 import map from "@/app/public/daily-fitness-map.jpg";
 import { LinkPreview } from "@/components/ui/link-preview";
 import QNA from "@/components/qna";
+import { CardDemo } from "@/components/card";
 
 export default function Home() {
   return (
@@ -86,8 +87,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-4">
-            <Card className="bg-white">
+          <div className="mx-auto  max-w-full items-center gap-6 py-12 lg:grid-cols-2 ">
+            <CardDemo />
+            {/* <Card className="bg-white">
               <CardContent className="flex flex-col items-center justify-center p-6 text-center">
                 <Dumbbell className="h-12 w-12 mb-4 text-gray-900" />
                 <h3 className="text-xl font-bold">Modern Equipment</h3>
@@ -126,7 +128,7 @@ export default function Home() {
                   access.
                 </p>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </section>

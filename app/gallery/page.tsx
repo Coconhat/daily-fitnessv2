@@ -1,4 +1,5 @@
 "use client";
+import { CardDemo } from "@/components/card";
 import { MarqueeDemo } from "@/components/marquee";
 import { ReactLenis } from "lenis/react";
 export default function index(): JSX.Element {
@@ -131,6 +132,7 @@ export default function index(): JSX.Element {
         </footer>
       </main>
       <MarqueeDemo />
+      <CardDemo />
     </ReactLenis>
   );
 }
