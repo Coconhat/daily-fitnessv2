@@ -235,7 +235,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-center justify-center">
                     <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>Locker room access</span>
+                    <span>Free wifi and water</span>
                   </li>
                 </ul>
                 <Button className="w-full">Get Started</Button>
@@ -247,6 +247,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">Silver</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold">PHP 999</span>
+                  <br />
                   <span className="text-gray-500">for 3 months</span>
                 </div>
                 <ul className="space-y-2 mb-6">
@@ -260,10 +261,10 @@ export default function Home() {
                   </li>
                   <li className="flex items-center justify-center">
                     <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>Locker room access</span>
+                    <span>Free wifi and water</span>
                   </li>
                 </ul>
-                <Button className="w-full">Get Started</Button>
+                <Button className="w-full mt-2">Get Started</Button>
               </CardContent>
             </Card>
 
@@ -275,24 +276,21 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">Gold</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold">PHP 1500</span>
-                  <span className="text-gray-500">for 6 months</span>
+                  <br />
+                  <span className="text-gray-500"> for 6 months</span>
                 </div>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center justify-center">
                     <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>All Basic features</span>
+                    <span>Access to gym floor</span>
                   </li>
                   <li className="flex items-center justify-center">
                     <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>Group classes included</span>
+                    <span>Standard equipment</span>
                   </li>
                   <li className="flex items-center justify-center">
                     <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>1 personal training session/month</span>
-                  </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>Towel service</span>
+                    <span>Free wifi and water</span>
                   </li>
                 </ul>
                 <Button className="w-full">Get Started</Button>
@@ -303,27 +301,24 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">Platinum</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold">PHP 2799</span>
+                  <br />
                   <span className="text-gray-500">For 6 months</span>
                 </div>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center justify-center">
                     <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>All Premium features</span>
+                    <span>Access to gym floor</span>
                   </li>
                   <li className="flex items-center justify-center">
                     <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>Unlimited guest passes</span>
+                    <span>Standard equipment</span>
                   </li>
                   <li className="flex items-center justify-center">
                     <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>4 personal training sessions/month</span>
-                  </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>Nutrition consultation</span>
+                    <span>Free wifi and water</span>
                   </li>
                 </ul>
-                <Button className="w-full">Get Started</Button>
+                <Button className="w-full mt-11">Get Started</Button>
               </CardContent>
             </Card>
           </div>
