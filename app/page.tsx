@@ -50,16 +50,19 @@ export default function Home() {
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
                 <Button size="lg" className="px-8">
-                  Start Free Trial
+                  Book a call
                 </Button>
-                <Button size="lg" variant="outline" className="px-8">
-                  View Membership
-                </Button>
+
+                <Link href="#pricing" scroll={true} legacyBehavior>
+                  <Button size="lg" variant="outline" className="px-8">
+                    View Membership
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="mx-auto w-full max-w-[500px]">
               <Image
-                src="/placeholder.svg?height=550&width=550"
+                src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/440150939_122109135734280990_6215751454428996132_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEZ_RTrycZb3_1kjrHjAPo755aD72283ULnloPvbbzdQgTFErQGTuCK9ytscFMQ5lQbqpcqAIH29JvoJUUSzUhk&_nc_ohc=CBCWlLEZSGgQ7kNvwEw9wIy&_nc_oc=AdnM2upTHNPVieJHLMT4uLMm_wqh2Yc50mdHMrI6MKHMwOWnByExIw7d7XjH91snPmVXJz9putVfWd5KUPffQBn9&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=Fq88xjFsPGR5VMMYs-DZGw&oh=00_AfG_MzyWvTJQTdKOQ7zl9QEOYk1SXpbeSbHUbKhVSK8iuQ&oe=6802BA14"
                 width={550}
                 height={550}
                 alt="Gym interior with modern equipment"
@@ -573,10 +576,27 @@ export default function Home() {
                   <div className="flex items-center gap-3">
                     <Phone className="h-6 w-6 text-primary flex-shrink-0" />
                     <a
-                      href="tel:09055478224"
+                      href="tel:(0995) 260 0264
+"
                       className="hover:underline text-left"
                     >
-                      09055478224
+                      (0995) 260 0264
+                    </a>
+                    <br />
+                    <a
+                      href="tel:(0945) 780 7652
+"
+                      className="hover:underline text-left"
+                    >
+                      (0945) 780 7652
+                    </a>
+                    <br />
+                    <a
+                      href="tel:(0905)547 8224
+"
+                      className="hover:underline text-left"
+                    >
+                      (0905)547 8224
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
