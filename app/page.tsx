@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
   Dumbbell,
   Clock,
@@ -15,11 +15,15 @@ import {
   Facebook,
   Instagram,
   Twitter,
+  CheckIcon,
+  InfoIcon,
 } from "lucide-react";
 import { NavbarDemo } from "@/components/nav-bar";
 import Gallery from "@/components/gallery";
 import { MarqueeDemo } from "@/components/marquee";
 import map from "@/app/public/daily-fitness-map.jpg";
+import { LinkPreview } from "@/components/ui/link-preview";
+import QNA from "@/components/qna";
 
 export default function Home() {
   return (
@@ -205,126 +209,220 @@ export default function Home() {
         id="pricing"
         className="w-full py-12 md:py-24 bg-gray-50 flex justify-center"
       >
-        <div className="container px-4 md:px-6 ">
+        <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Membership Plans
               </h2>
               <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Choose the plan that fits your fitness goals and budget.
+                Our pricing consists of a membership fee plus an hourly usage
+                rate to give you maximum flexibility.
               </p>
             </div>
           </div>
-          <div className="mx-auto grid max-w-7xl gap-6 py-12 md:grid-cols-2 sm:grod-cols-2">
-            <Card className="bg-white">
+
+          <div className="mx-auto grid max-w-7xl gap-6 py-6 md:grid-cols-2 sm:grid-cols-2">
+            <Card className="bg-white shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
                 <h3 className="text-2xl font-bold mb-2">Regular</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold">PHP 500</span>
+                <div className="mb-2">
+                  <span className="text-4xl font-bold">₱500</span>
                   <span className="text-gray-500">/month</span>
                 </div>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
-                    <span>exclusive for students</span>
-                  </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                <div className="mb-4 bg-green-50 text-green-700 text-sm py-1 px-2 rounded-md inline-block">
+                  Exclusive for students
+                </div>
+                <div className="border-t border-b border-gray-100 py-4 mb-4">
+                  <p className="text-sm text-gray-500 mb-2">
+                    + ₱59/hour usage fee
+                  </p>
+                </div>
+                <ul className="space-y-2 mb-6 text-left pl-2">
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Access to gym floor</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Standard equipment</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Free wifi and water</span>
                   </li>
                 </ul>
-                <Button className="w-full">Get Started</Button>
+                <Button className="w-full bg-primary hover:bg-primary-dark text-white">
+                  Get Started
+                </Button>
               </CardContent>
             </Card>
 
-            <Card className="bg-white">
+            <Card className="bg-white shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
                 <h3 className="text-2xl font-bold mb-2">Silver</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold">PHP 999</span>
-                  <br />
-                  <span className="text-gray-500">for 3 months</span>
+                <div className="mb-2">
+                  <span className="text-4xl font-bold">₱999</span>
                 </div>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                <div className="mb-4 text-gray-500">
+                  for 3 months (₱333/month)
+                </div>
+                <div className="border-t border-b border-gray-100 py-4 mb-4">
+                  <p className="text-sm text-gray-500">
+                    + ₱59/hour for students
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    + ₱79/hour for non-students
+                  </p>
+                </div>
+                <ul className="space-y-2 mb-6 text-left pl-2">
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Access to gym floor</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Standard equipment</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Free wifi and water</span>
                   </li>
                 </ul>
-                <Button className="w-full mt-2">Get Started</Button>
+                <Button className="w-full bg-primary hover:bg-primary-dark text-white">
+                  Get Started
+                </Button>
               </CardContent>
             </Card>
 
-            <Card className="bg-white border-2 border-gray-900">
+            <Card className="bg-white border-2 border-primary shadow-md hover:shadow-lg transition-shadow relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold py-1 px-4 rounded-bl">
+                MOST POPULAR
+              </div>
               <CardContent className="p-6 text-center">
-                <div className="bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full w-fit mx-auto mb-4">
-                  MOST POPULAR
-                </div>
                 <h3 className="text-2xl font-bold mb-2">Gold</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold">PHP 1500</span>
-                  <br />
-                  <span className="text-gray-500"> for 6 months</span>
+                <div className="mb-2">
+                  <span className="text-4xl font-bold">₱1,500</span>
                 </div>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                <div className="mb-4 text-gray-500">
+                  for 6 months (₱250/month)
+                </div>
+                <div className="border-t border-b border-gray-100 py-4 mb-4">
+                  <p className="text-sm text-gray-500">
+                    + ₱59/hour for students
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    + ₱79/hour for non-students
+                  </p>
+                </div>
+                <ul className="space-y-2 mb-6 text-left pl-2">
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Access to gym floor</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Standard equipment</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Free wifi and water</span>
                   </li>
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
+                    <span>One free fitness assessment</span>
+                  </li>
                 </ul>
-                <Button className="w-full">Get Started</Button>
+                <Button className="w-full bg-primary hover:bg-primary-dark text-white">
+                  Get Started
+                </Button>
               </CardContent>
             </Card>
-            <Card className="bg-white">
+
+            <Card className="bg-white shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
                 <h3 className="text-2xl font-bold mb-2">Platinum</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold">PHP 2799</span>
-                  <br />
-                  <span className="text-gray-500">For 1 year</span>
+                <div className="mb-2">
+                  <span className="text-4xl font-bold">₱2,799</span>
                 </div>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                <div className="mb-4 text-gray-500">
+                  for 1 year (₱233/month)
+                </div>
+                <div className="border-t border-b border-gray-100 py-4 mb-4">
+                  <p className="text-sm text-gray-500">
+                    + ₱59/hour for students
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    + ₱79/hour for non-students
+                  </p>
+                </div>
+                <ul className="space-y-2 mb-6 text-left pl-2">
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Access to gym floor</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Standard equipment</span>
                   </li>
-                  <li className="flex items-center justify-center">
-                    <ChevronRight className="h-4 w-4 mr-2 text-gray-500" />
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
                     <span>Free wifi and water</span>
                   </li>
+                  <li className="flex items-center">
+                    <CheckIcon className="h-5 w-5 mr-2 text-green-500 flex-shrink-0" />
+                    <span>Two free fitness assessments</span>
+                  </li>
                 </ul>
-                <Button className="w-full mt-11">Get Started</Button>
+                <Button className="w-full bg-primary hover:bg-primary-dark text-white">
+                  Get Started
+                </Button>
               </CardContent>
             </Card>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="mt-12 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-6">
+              Frequently Asked Questions
+            </h3>
+
+            <div className="space-y-4">
+              <QNA />
+              {/* <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-bold">
+                  Why do you charge an hourly fee in addition to membership?
+                </h4>
+                <p className="mt-2 text-gray-600">
+                  Our dual pricing model ensures that members only pay for the
+                  time they actually use the gym, making it more cost-effective
+                  for everyone. This allows us to maintain top-quality equipment
+                  and facilities while keeping membership fees affordable.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-bold">
+                  How do I prove I'm a student to get the discounted rate?
+                </h4>
+                <p className="mt-2 text-gray-600">
+                  Simply bring a valid student ID card with you when you sign up
+                  and each time you visit. We'll verify your student status to
+                  apply the discounted hourly rate of ₱59.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-bold">
+                  Is there a maximum time limit per visit?
+                </h4>
+                <p className="mt-2 text-gray-600">
+                  No, you can stay as long as you like during our operating
+                  hours. The hourly fee will be calculated based on your total
+                  time at the gym.
+                </p>
+              </div> */}
+            </div>
           </div>
         </div>
       </section>
@@ -364,14 +462,12 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="h-6 w-6 text-primary flex-shrink-0" />
-                    <a
-                      href="https://www.facebook.com/daily.fitness2024"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <LinkPreview
+                      url="https://www.facebook.com/daily.fitness2024"
                       className="hover:underline text-left"
                     >
                       facebook.com/daily.fitness2024
-                    </a>
+                    </LinkPreview>
                   </div>
                 </div>
 
@@ -387,24 +483,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="pt-4">
-                  <div className="flex gap-4 justify-center">
-                    <a
-                      href="https://facebook.com/daily.fitness2024"
-                      aria-label="Facebook"
-                      className="rounded-full bg-gray-100 p-2 hover:bg-gray-200 transition-colors"
-                    >
-                      <Facebook className="h-5 w-5 text-gray-600" />
-                    </a>
-                    <a
-                      href="#"
-                      aria-label="Instagram"
-                      className="rounded-full bg-gray-100 p-2 hover:bg-gray-200 transition-colors"
-                    >
-                      <Instagram className="h-5 w-5 text-gray-600" />
-                    </a>
-                  </div>
-                </div>
+                <div className="pt-4"></div>
               </div>
 
               {/* Contact Form */}
@@ -519,11 +598,22 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Map Integration */}
+            <div>
+              <p>
+                Visit us at the second floor of{" "}
+                <LinkPreview url="https://www.google.co.uk/maps/place/Vintage+Cuts+Barber+Shop/@13.9413832,121.1470485,70m/data=!3m1!1e3!4m6!3m5!1s0x33bd6cc745fd56b9:0x84d77fe09ac1c3a0!8m2!3d13.9412783!4d121.1470555!16s%2Fg%2F11sbwqbcj5?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
+                  <span className="underline">Vintage Cut Barber</span>
+                </LinkPreview>{" "}
+                Near De La Salle Lipa
+              </p>
+            </div>
+            {/* Map */}
+
             <div className="w-full max-w-4xl mt-8 rounded-lg overflow-hidden shadow-sm h-64 bg-gray-200">
-              {/* Replace with actual map implementation or keep as placeholder */}
               <div className="w-full h-full flex items-center justify-center text-gray-500">
-                <Image src={map} alt="map" />
+                <LinkPreview url="https://www.google.co.uk/maps/place/Vintage+Cuts+Barber+Shop/@13.9413832,121.1470485,70m/data=!3m1!1e3!4m6!3m5!1s0x33bd6cc745fd56b9:0x84d77fe09ac1c3a0!8m2!3d13.9412783!4d121.1470555!16s%2Fg%2F11sbwqbcj5?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
+                  <Image src={map} alt="map" />
+                </LinkPreview>
               </div>
             </div>
           </div>
