@@ -145,7 +145,8 @@ export function CardDemo() {
             Good gym community
           </h1>
           <p className="font-normal text-base text-gray-50 relative my-4">
-            GOod gym community and friendly staff to help you with your fitness
+            A welcoming gym environment with friendly staff ready to support
+            your fitness journey.
           </p>
         </div>
       </div>
