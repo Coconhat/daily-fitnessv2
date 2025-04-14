@@ -302,7 +302,7 @@ export default function Home() {
                 <div className="mb-4">
                   <span className="text-4xl font-bold">PHP 2799</span>
                   <br />
-                  <span className="text-gray-500">For 6 months</span>
+                  <span className="text-gray-500">For 1 year</span>
                 </div>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center justify-center">
@@ -343,15 +343,17 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-center gap-2">
                     <MapPin className="h-5 w-5 text-gray-500" />
-                    <span>123 Fitness Street, Workout City, WO 12345</span>
+                    <span>
+                      Laurel National Highway, Mataas na Lupa, 4217, Batangas
+                    </span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Phone className="h-5 w-5 text-gray-500" />
-                    <span>(123) 456-7890</span>
+                    <span>09055478224</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Mail className="h-5 w-5 text-gray-500" />
-                    <span>info@fitzone.com</span>
+                    <span>https://www.facebook.com/daily.fitness2024</span>
                   </div>
                 </div>
                 <div className="space-y-2 text-center">
