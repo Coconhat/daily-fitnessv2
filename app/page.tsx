@@ -17,6 +17,12 @@ import {
   Twitter,
   CheckIcon,
   InfoIcon,
+  Badge,
+  MessagesSquare,
+  Utensils,
+  CalendarDays,
+  FileChartColumn,
+  Clipboard,
 } from "lucide-react";
 import { NavbarDemo } from "@/components/nav-bar";
 import Gallery from "@/components/gallery";
@@ -134,51 +140,172 @@ export default function Home() {
         className="w-full py-12 md:py-24 bg-gray-50 flex justify-center"
       >
         <div className="container px-4 md:px-6">
-          <div className="container px-4 md:px-6 ">
-            <div className="space-y-2 mx-auto text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Meet Our Trainers
-              </h2>
-              <p className=" text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Our certified professionals are here to help you reach your
-                fitness goals.
-              </p>
+          <div className="space-y-2 mx-auto text-center">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              Meet Our Trainers
+            </h2>
+            <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Our certified professionals are here to help you reach your
+              fitness goals.
+            </p>
+          </div>
+
+          {/* Personal Training Inclusions */}
+          <div className="mt-8 mb-12 max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-primary text-white p-4">
+              <h3 className="text-xl font-bold text-center">
+                What's Included With Personal Training
+              </h3>
+            </div>
+            <div className="p-6">
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="flex flex-col items-center text-center">
+                  <div className="bg-primary/10 p-4 rounded-full mb-3">
+                    <Clipboard className="h-8 w-8 text-primary" />
+                  </div>
+                  <h4 className="font-semibold mb-2">
+                    Comprehensive Assessment
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Initial fitness level & postural analysis to identify
+                    strengths and areas for improvement
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center text-center">
+                  <div className="bg-primary/10 p-4 rounded-full mb-3">
+                    <Users className="h-8 w-8 text-primary" />
+                  </div>
+                  <h4 className="font-semibold mb-2">1-on-1 Training</h4>
+                  <p className="text-sm text-gray-600">
+                    Personalized sessions with dedicated attention to form,
+                    technique and motivation
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center text-center">
+                  <div className="bg-primary/10 p-4 rounded-full mb-3">
+                    <FileChartColumn className="h-8 w-8 text-primary" />
+                  </div>
+                  <h4 className="font-semibold mb-2">Progress Monitoring</h4>
+                  <p className="text-sm text-gray-600">
+                    Regular tracking of key metrics to ensure you're moving
+                    toward your goals
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-6">
+                <div className="flex flex-col items-center text-center">
+                  <div className="bg-primary/10 p-4 rounded-full mb-3">
+                    <CalendarDays className="h-8 w-8 text-primary" />
+                  </div>
+                  <h4 className="font-semibold mb-2">Custom Workout Plan</h4>
+                  <p className="text-sm text-gray-600">
+                    Tailored exercise programs designed specifically for your
+                    body and goals
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center text-center">
+                  <div className="bg-primary/10 p-4 rounded-full mb-3">
+                    <Utensils className="h-8 w-8 text-primary" />
+                  </div>
+                  <h4 className="font-semibold mb-2">Nutritional Advice</h4>
+                  <p className="text-sm text-gray-600">
+                    Guidance on eating habits that complement your training for
+                    maximum results
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center text-center">
+                  <div className="bg-primary/10 p-4 rounded-full mb-3">
+                    <MessagesSquare className="h-8 w-8 text-primary" />
+                  </div>
+                  <h4 className="font-semibold mb-2">Ongoing Support</h4>
+                  <p className="text-sm text-gray-600">
+                    Regular check-ins and adjustments to keep you motivated and
+                    on track
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mx-auto grid max-w-5xl gap-8 py-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 name: "Alex Johnson",
                 specialty: "Strength & Conditioning",
                 image: "/placeholder.svg?height=300&width=300",
+                certification: "NASM Certified",
+                experience: "7+ years experience",
               },
               {
                 name: "Sarah Williams",
                 specialty: "Yoga & Pilates",
                 image: "/placeholder.svg?height=300&width=300",
+                certification: "RYT-500 Certified",
+                experience: "5+ years experience",
               },
               {
                 name: "Michael Chen",
                 specialty: "HIIT & Functional Training",
                 image: "/placeholder.svg?height=300&width=300",
+                certification: "ACE Certified",
+                experience: "6+ years experience",
               },
             ].map((trainer, index) => (
-              <Card key={index} className="overflow-hidden">
-                <Image
-                  src={trainer.image || "/placeholder.svg"}
-                  alt={trainer.name}
-                  width={300}
-                  height={300}
-                  className="w-full h-64 object-cover"
-                />
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-bold">{trainer.name}</h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {trainer.specialty}
-                  </p>
-                  <Button variant="ghost" className="mt-4">
-                    View Profile
-                  </Button>
+              <Card
+                key={index}
+                className="overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <div className="relative">
+                  <Image
+                    src={trainer.image || "/placeholder.svg"}
+                    alt={trainer.name}
+                    width={300}
+                    height={300}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <h3 className="text-xl font-bold text-white">
+                      {trainer.name}
+                    </h3>
+                    <p className="text-sm text-white/80 mt-1">
+                      {trainer.specialty}
+                    </p>
+                  </div>
+                </div>
+                <CardContent className="p-4">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center text-sm">
+                      <Badge className="mr-2">{trainer.certification}</Badge>
+                      <span className="text-gray-500">
+                        {trainer.experience}
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-600 mt-2">
+                      Specializing in {trainer.specialty.toLowerCase()} to help
+                      clients achieve their fitness goals through personalized
+                      programs.
+                    </p>
+                    <div className="flex justify-between mt-4">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="text-primary border-primary hover:bg-primary/10"
+                      >
+                        View Profile
+                      </Button>
+                      <Button
+                        size="sm"
+                        className="bg-primary hover:bg-primary-dark text-white"
+                      >
+                        Book Session
+                      </Button>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -476,10 +603,8 @@ export default function Home() {
                     Hours of Operation
                   </h3>
                   <div className="grid grid-cols-2 gap-2 text-left">
-                    <div className="font-medium">Monday - Friday</div>
-                    <div>5:00 AM - 11:00 PM</div>
-                    <div className="font-medium">Saturday - Sunday</div>
-                    <div>7:00 AM - 9:00 PM</div>
+                    <div className="font-medium">Daily</div>
+                    <div>6:00 AM - 8:00 PM</div>
                   </div>
                 </div>
 
