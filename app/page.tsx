@@ -12,10 +12,14 @@ import {
   MapPin,
   Phone,
   Mail,
+  Facebook,
+  Instagram,
+  Twitter,
 } from "lucide-react";
 import { NavbarDemo } from "@/components/nav-bar";
 import Gallery from "@/components/gallery";
 import { MarqueeDemo } from "@/components/marquee";
+import map from "@/app/public/daily-fitness-map.jpg";
 
 export default function Home() {
   return (
@@ -326,117 +330,200 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="w-full py-12 md:py-24">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center gap-6 text-center">
-            <div className="space-y-2 max-w-3xl">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+      <section id="contact" className="w-full py-12 md:py-24 bg-gray-50">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="flex flex-col items-center justify-center gap-8 text-center">
+            <div className="space-y-3 max-w-3xl">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
                 Get In Touch
               </h2>
-              <p className="max-w-[600px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Have questions about our gym or membership options? We're here
-                to help.
+              <p className="max-w-[700px] mx-auto text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Have questions about our gym or membership options? Our team is
+                ready to assist you with any inquiries.
               </p>
             </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:gap-12 max-w-4xl w-full">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-center gap-2">
-                    <MapPin className="h-5 w-5 text-gray-500" />
-                    <span>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:gap-12 max-w-4xl w-full">
+              {/* Contact Information */}
+              <div className="flex flex-col justify-center space-y-6 bg-white p-6 rounded-lg shadow-sm">
+                <div className="space-y-5">
+                  <div className="flex items-center gap-3">
+                    <MapPin className="h-6 w-6 text-primary flex-shrink-0" />
+                    <span className="text-left">
                       Laurel National Highway, Mataas na Lupa, 4217, Batangas
                     </span>
                   </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5 text-gray-500" />
-                    <span>09055478224</span>
+                  <div className="flex items-center gap-3">
+                    <Phone className="h-6 w-6 text-primary flex-shrink-0" />
+                    <a
+                      href="tel:09055478224"
+                      className="hover:underline text-left"
+                    >
+                      09055478224
+                    </a>
                   </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <Mail className="h-5 w-5 text-gray-500" />
-                    <span>https://www.facebook.com/daily.fitness2024</span>
+                  <div className="flex items-center gap-3">
+                    <Mail className="h-6 w-6 text-primary flex-shrink-0" />
+                    <a
+                      href="https://www.facebook.com/daily.fitness2024"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline text-left"
+                    >
+                      facebook.com/daily.fitness2024
+                    </a>
                   </div>
                 </div>
-                <div className="space-y-2 text-center">
-                  <h3 className="text-xl font-bold">Hours of Operation</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>Monday - Friday</div>
+
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold text-left border-b pb-2">
+                    Hours of Operation
+                  </h3>
+                  <div className="grid grid-cols-2 gap-2 text-left">
+                    <div className="font-medium">Monday - Friday</div>
                     <div>5:00 AM - 11:00 PM</div>
-                    <div>Saturday - Sunday</div>
+                    <div className="font-medium">Saturday - Sunday</div>
                     <div>7:00 AM - 9:00 PM</div>
                   </div>
                 </div>
+
+                <div className="pt-4">
+                  <div className="flex gap-4 justify-center">
+                    <a
+                      href="https://facebook.com/daily.fitness2024"
+                      aria-label="Facebook"
+                      className="rounded-full bg-gray-100 p-2 hover:bg-gray-200 transition-colors"
+                    >
+                      <Facebook className="h-5 w-5 text-gray-600" />
+                    </a>
+                    <a
+                      href="#"
+                      aria-label="Instagram"
+                      className="rounded-full bg-gray-100 p-2 hover:bg-gray-200 transition-colors"
+                    >
+                      <Instagram className="h-5 w-5 text-gray-600" />
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
+
+              {/* Contact Form */}
+              <div className="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-bold text-left mb-4">
+                  Send us a message
+                </h3>
+                <form className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="first-name"
+                        className="text-sm font-medium leading-none block text-left"
+                      >
+                        First name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        id="first-name"
+                        required
+                        className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
+                        placeholder="John"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="last-name"
+                        className="text-sm font-medium leading-none block text-left"
+                      >
+                        Last name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        id="last-name"
+                        required
+                        className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
+                        placeholder="Doe"
+                      />
+                    </div>
+                  </div>
+
                   <div className="space-y-2">
                     <label
-                      htmlFor="first-name"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      htmlFor="email"
+                      className="text-sm font-medium leading-none block text-left"
                     >
-                      First name
+                      Email <span className="text-red-500">*</span>
                     </label>
                     <input
-                      id="first-name"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Enter your first name"
+                      id="email"
+                      type="email"
+                      required
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
+                      placeholder="johndoe@example.com"
                     />
                   </div>
+
                   <div className="space-y-2">
                     <label
-                      htmlFor="last-name"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      htmlFor="phone"
+                      className="text-sm font-medium leading-none block text-left"
                     >
-                      Last name
+                      Phone
                     </label>
                     <input
-                      id="last-name"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Enter your last name"
+                      id="phone"
+                      type="tel"
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
+                      placeholder="09XX XXX XXXX"
                     />
                   </div>
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="subject"
+                      className="text-sm font-medium leading-none block text-left"
+                    >
+                      Subject
+                    </label>
+                    <select
+                      id="subject"
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
+                    >
+                      <option value="">Select a subject</option>
+                      <option value="membership">Membership Inquiry</option>
+                      <option value="classes">Class Information</option>
+                      <option value="training">Personal Training</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="message"
+                      className="text-sm font-medium leading-none block text-left"
+                    >
+                      Message <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      required
+                      className="flex min-h-[120px] w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm ring-offset-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
+                      placeholder="How can we help you today?"
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    className="w-full bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded transition-colors"
                   >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="phone"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="message"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Enter your message"
-                  />
-                </div>
-                <Button className="w-full">Send Message</Button>
+                    Send Message
+                  </Button>
+                </form>
+              </div>
+            </div>
+
+            {/* Map Integration */}
+            <div className="w-full max-w-4xl mt-8 rounded-lg overflow-hidden shadow-sm h-64 bg-gray-200">
+              {/* Replace with actual map implementation or keep as placeholder */}
+              <div className="w-full h-full flex items-center justify-center text-gray-500">
+                <Image src={map} alt="map" />
               </div>
             </div>
           </div>
@@ -449,27 +536,21 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <Dumbbell className="h-6 w-6" />
             <p className="text-sm font-medium">
-              © {new Date().getFullYear()} FitZone. All rights reserved.
+              © {new Date().getFullYear()} Daily Fitness Gym
             </p>
           </div>
           <div className="flex gap-4">
             <Link
-              href="#"
+              href="https://www.facebook.com/daily.fitness2024"
               className="text-sm font-medium hover:underline underline-offset-4"
             >
-              Privacy Policy
+              Facebook
             </Link>
             <Link
-              href="#"
+              href="https://www.facebook.com/daily.fitness2024"
               className="text-sm font-medium hover:underline underline-offset-4"
             >
-              Terms of Service
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Careers
+              Instagram
             </Link>
           </div>
         </div>

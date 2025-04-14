@@ -1,5 +1,6 @@
 "use client";
 import { ReactLenis } from "lenis/react";
+import Image from "next/image";
 import { JSX } from "react";
 
 export default function Gallery(): JSX.Element {
