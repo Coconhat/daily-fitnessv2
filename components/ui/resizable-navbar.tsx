@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
-import logo from "@/app/public/dailyfitness.jpg";
+import logo from "@/public/dailyfitness.jpg";
 import {
   motion,
   AnimatePresence,

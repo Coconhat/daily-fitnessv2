@@ -27,7 +27,7 @@ import {
 import { NavbarDemo } from "@/components/nav-bar";
 import Gallery from "@/components/gallery";
 import { MarqueeDemo } from "@/components/marquee";
-import map from "@/app/public/daily-fitness-map.jpg";
+import map from "@/public/daily-fitness-map.jpg";
 import { LinkPreview } from "@/components/ui/link-preview";
 import QNA from "@/components/qna";
 import { CardDemo } from "@/components/card";
