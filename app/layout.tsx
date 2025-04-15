@@ -3,11 +3,10 @@ import "./globals.css";
 import ReactLenis from "lenis/react";
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.dev",
+  title: "Daily Fitness Gym",
+  description:
+    "Your ultimate fitness destination offering premium equipment, expert trainers, and air conditioned to help you achieve your health and fitness goals.",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{

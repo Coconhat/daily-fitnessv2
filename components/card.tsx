@@ -1,10 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
 
-import video1 from "@/app/public/gymvideo1.gif";
+import video1 from "@/app/public/gymvideo1v2.gif";
 import video2 from "@/app/public/gymvideo2.gif";
-import video3 from "@/app/public/gymvideo3.gif";
-import video4 from "@/app/public/gymvideo4.gif";
+import video3 from "@/app/public/gymvideo3v2.gif";
+import video4 from "@/app/public/gymvideo4v2.gif";
 import Image from "next/image";
 export function CardDemo() {
   return (
