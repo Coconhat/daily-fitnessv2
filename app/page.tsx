@@ -124,7 +124,7 @@ export default function Home() {
             </div>
             <div className="p-6">
               {/* Responsive Grid */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="flex flex-col items-center text-center">
                   <div className="bg-primary/10 p-4 rounded-full mb-3">
                     <Clipboard className="h-8 w-8 text-primary" />
