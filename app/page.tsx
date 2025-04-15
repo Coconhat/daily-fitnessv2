@@ -177,21 +177,21 @@ export default function Home() {
           <div className="mx-auto grid max-w-5xl gap-8 py-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                name: "Alex Johnson",
+                name: "Coach 1",
                 specialty: "Strength & Conditioning",
                 image: "/placeholder.svg?height=300&width=300",
                 certification: "NASM Certified",
                 experience: "7+ years experience",
               },
               {
-                name: "Sarah Williams",
+                name: "Coach 2",
                 specialty: "Yoga & Pilates",
                 image: "/placeholder.svg?height=300&width=300",
                 certification: "RYT-500 Certified",
                 experience: "5+ years experience",
               },
               {
-                name: "Michael Chen",
+                name: "Coach 3",
                 specialty: "HIIT & Functional Training",
                 image: "/placeholder.svg?height=300&width=300",
                 certification: "ACE Certified",
