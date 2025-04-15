@@ -61,7 +61,7 @@ export function CardDemo() {
           />
         </div>
 
-        {/* Hover video overlay */}
+        {/* Hover video overlay  dwadiuhji*/}
         <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
           <Image src={video2} alt="Hover video" fill className="object-cover" />
         </div>
