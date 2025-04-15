@@ -108,7 +108,7 @@ export function CardDemo() {
         {/* Content */}
         <div className="text relative z-30">
           <h1 className="font-bold text-xl md:text-3xl text-gray-50 relative">
-            Free Wifi and air-conditioned
+            Wifi and air-conditioned
           </h1>
           <p className="font-normal text-base text-gray-50 relative my-4">
             This gym offers free Wi-Fi and air conditioning
