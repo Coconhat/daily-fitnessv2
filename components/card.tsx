@@ -16,7 +16,7 @@ export function CardDemo() {
           "transition-all duration-500"
         )}
       >
-        {/* Static background image */}
+        {/* Static background image adwwdad */}
         <div className="absolute inset-0 w-full h-full">
           <Image
             src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/482349741_122172187718280990_2739300049283754482_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEUHCaEnAkFM8i9opy-G4KmpXAqA8RUMHalcCoDxFQwdm2AjS8Mh4jWuwgGRm444L47T5x_cBxW7wkRqIYzFyoi&_nc_ohc=fLBmZS5kzOwQ7kNvwHCXAzy&_nc_oc=AdlEi_cKFXBi6y2WXVJUMifmQr1gMrY_MRZZ1WP8wWNwneeBvTCqXBN5g_mpFc1wgQwmhzsMP6mmqpXwbhpqGgvT&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=d8VZfs_-p_XzsKHInPy7hw&oh=00_AfFfnRIqfCjsYQNIM3Io73EXaX3-dpCsfsiiflh0pg05DQ&oe=6802EE03"
