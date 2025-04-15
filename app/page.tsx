@@ -89,46 +89,6 @@ export default function Home() {
           </div>
           <div className="mx-auto  max-w-full items-center gap-6 py-12 lg:grid-cols-2 ">
             <CardDemo />
-            {/* <Card className="bg-white">
-              <CardContent className="flex flex-col items-center justify-center p-6 text-center">
-                <Dumbbell className="h-12 w-12 mb-4 text-gray-900" />
-                <h3 className="text-xl font-bold">Modern Equipment</h3>
-                <p className="text-sm text-gray-500 mt-2">
-                  State-of-the-art machines and free weights for every fitness
-                  level.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white">
-              <CardContent className="flex flex-col items-center justify-center p-6 text-center">
-                <Users className="h-12 w-12 mb-4 text-gray-900" />
-                <h3 className="text-xl font-bold">Expert Trainers</h3>
-                <p className="text-sm text-gray-500 mt-2">
-                  Certified professionals to guide and motivate you on your
-                  fitness journey.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white">
-              <CardContent className="flex flex-col items-center justify-center p-6 text-center">
-                <Calendar className="h-12 w-12 mb-4 text-gray-900" />
-                <h3 className="text-xl font-bold">Diverse Classes</h3>
-                <p className="text-sm text-gray-500 mt-2">
-                  From yoga to HIIT, we offer a wide range of classes for all
-                  interests.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white">
-              <CardContent className="flex flex-col items-center justify-center p-6 text-center">
-                <Clock className="h-12 w-12 mb-4 text-gray-900" />
-                <h3 className="text-xl font-bold">24/7 Access</h3>
-                <p className="text-sm text-gray-500 mt-2">
-                  Work out on your schedule with round-the-clock facility
-                  access.
-                </p>
-              </CardContent>
-            </Card> */}
           </div>
         </div>
       </section>
