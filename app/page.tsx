@@ -51,7 +51,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
                 <Button size="lg" className="px-8">
-                  Book a call
+                  Schedule Your Free Consultation Today!
                 </Button>
 
                 <Link href="#pricing" scroll={true} legacyBehavior>
@@ -163,7 +163,8 @@ export default function Home() {
               </h3>
             </div>
             <div className="p-6">
-              <div className="grid md:grid-cols-3 gap-6">
+              {/* Responsive Grid */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="flex flex-col items-center text-center">
                   <div className="bg-primary/10 p-4 rounded-full mb-3">
                     <Clipboard className="h-8 w-8 text-primary" />
@@ -190,19 +191,6 @@ export default function Home() {
 
                 <div className="flex flex-col items-center text-center">
                   <div className="bg-primary/10 p-4 rounded-full mb-3">
-                    <FileChartColumn className="h-8 w-8 text-primary" />
-                  </div>
-                  <h4 className="font-semibold mb-2">Progress Monitoring</h4>
-                  <p className="text-sm text-gray-600">
-                    Regular tracking of key metrics to ensure you're moving
-                    toward your goals
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6 mt-6">
-                <div className="flex flex-col items-center text-center">
-                  <div className="bg-primary/10 p-4 rounded-full mb-3">
                     <CalendarDays className="h-8 w-8 text-primary" />
                   </div>
                   <h4 className="font-semibold mb-2">Custom Workout Plan</h4>
@@ -220,17 +208,6 @@ export default function Home() {
                   <p className="text-sm text-gray-600">
                     Guidance on eating habits that complement your training for
                     maximum results
-                  </p>
-                </div>
-
-                <div className="flex flex-col items-center text-center">
-                  <div className="bg-primary/10 p-4 rounded-full mb-3">
-                    <MessagesSquare className="h-8 w-8 text-primary" />
-                  </div>
-                  <h4 className="font-semibold mb-2">Ongoing Support</h4>
-                  <p className="text-sm text-gray-600">
-                    Regular check-ins and adjustments to keep you motivated and
-                    on track
                   </p>
                 </div>
               </div>
@@ -738,13 +715,13 @@ export default function Home() {
             </div>
 
             <div>
-              <p>
+              <div>
                 Visit us at the second floor of{" "}
                 <LinkPreview url="https://www.google.co.uk/maps/place/Vintage+Cuts+Barber+Shop/@13.9413832,121.1470485,70m/data=!3m1!1e3!4m6!3m5!1s0x33bd6cc745fd56b9:0x84d77fe09ac1c3a0!8m2!3d13.9412783!4d121.1470555!16s%2Fg%2F11sbwqbcj5?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
                   <span className="underline">Vintage Cut Barber</span>
                 </LinkPreview>{" "}
                 Near De La Salle Lipa
-              </p>
+              </div>
             </div>
             {/* Map */}
 

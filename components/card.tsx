@@ -111,7 +111,7 @@ export function CardDemo() {
             Free Wifi and air-conditioned
           </h1>
           <p className="font-normal text-base text-gray-50 relative my-4">
-            This gym have free wifi and air-conditioned for your comfort.
+            This gym offers free Wi-Fi and air conditioning
           </p>
         </div>
       </div>

@@ -5,7 +5,7 @@ import ReactLenis from "lenis/react";
 export const metadata: Metadata = {
   title: "Daily Fitness Gym",
   description:
-    "Your ultimate fitness destination offering premium equipment, expert trainers, and air conditioned to help you achieve your health and fitness goals.",
+    "Discover Daily Fitness Gym in Lipa City – your destination for top-tier fitness equipment, certified trainers, and a comfortable, air-conditioned environment. Achieve your health and fitness goals. Join us today.",
 };
 export default function RootLayout({
   children,

@@ -239,7 +239,7 @@ export const NavbarLogo = () => {
     >
       <Image src={logo} alt="logo" width={60} height={60} />
       <span className="font-medium text-black dark:text-white">
-        Daily fitness Gym
+        Daily Fitness Gym
       </span>
     </Link>
   );
